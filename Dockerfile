@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 				gcc \
 				curl \
 				unzip \
-				libffi-dev \
+				libffi-dev
 	&& rm -rf /var/lib/apt/lists/*
 
 # Add Consul from https://releases.hashicorp.com/consul
@@ -49,7 +49,7 @@ RUN curl -Ls -o get-pip.py https://bootstrap.pypa.io/get-pip.py \
 				mock==2.0.0
 
 # configure ContainerPilot and MySQL
-COPY etc /etc
+COPY etc /usr/local/etc
 COPY bin /usr/local/bin
 
 # override the parent entrypoint
