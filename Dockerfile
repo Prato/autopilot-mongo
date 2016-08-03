@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 				gcc \
 				curl \
 				unzip \
-				libffi-dev
+				libffi-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Add Consul from https://releases.hashicorp.com/consul
